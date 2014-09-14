@@ -1,0 +1,75 @@
+.list--steps {
+    position: relative;
+    }
+    .list--steps-tlen {
+        font-size: .7em;
+        }
+.demo--css {
+    position: absolute;
+    bottom: -350px;
+    right: 0;
+    left: 0;
+    width: 865px;
+    height: 306px;
+    margin: auto;
+    background-color: teal;
+    background-image: url(../../assets/img/demos/kitten-h306.jpeg);
+    background-blend-mode: luminosity;
+    }
+
+.demo--css-color {
+    background-image: none;
+    background-blend-mode: normal;
+    }
+.demo--css-img {
+    background-blend-mode: normal;
+    }
+
+.demo--css-blend {
+    }
+
+
+.demo--tlen {
+    position: absolute;
+    width: 865px;
+    height: 329px;
+    left: 0;
+    right: 0;
+    bottom: -350px;
+    margin: auto;
+    background-color: #FFF;
+    background-image:
+        url(http://img-fotki.yandex.ru/get/5113/5091629.a1/0_8541e_74315074_XL),
+      radial-gradient(circle, white 30%, transparent 75%),
+      radial-gradient(circle, white 30%, transparent 75%),
+      url(http://img-fotki.yandex.ru/get/4809/5091629.a1/0_8541d_e0623a7b_orig)
+      ;
+      background-position:
+        50% 50%,
+        475px 140px,
+        525px 140px,
+        50% 100%;
+      background-blend-mode:
+        overlay,
+        color-dodge,
+        color-dodge,
+        luminosity;
+      background-size:
+        cover,
+        50px 50px,
+        50px 50px,
+        auto;
+      background-repeat: no-repeat;
+
+    }
+
+.demo--tlen-color {
+    background-image: none;
+    background-blend-mode: normal;
+    }
+.demo--tlen-img {
+    background-blend-mode: normal;
+    }
+
+.demo--tlen-blend {
+    }

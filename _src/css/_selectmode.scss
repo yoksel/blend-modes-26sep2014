@@ -1,0 +1,97 @@
+$selectmode-width: 890;
+$selectmode-height: 560;
+
+.selectmode-demo {
+  position: absolute;
+  top: 0;
+  bottom: 1em;
+  left: 1em;
+  right: 0;
+  width: #{$selectmode-width}px;
+  height: #{$selectmode-height}px;
+  margin: auto;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    right: 50px;
+    top: 50px;
+    background: currentColor;
+    }
+
+  .inp-range {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 50%;
+      margin: auto;
+      bottom: 2em;
+      cursor: pointer;
+      }
+  }
+
+.selectmode-demo__content {
+  display: inline-block;
+  position: relative;
+  width: #{$selectmode-width}px;
+  height: #{$selectmode-height}px;
+
+  background-image:  url(../../assets/img/demos/kitten-565.jpeg);
+  background-repeat: no-repeat;
+  box-shadow: 0 0 10px rgba(0,0,0,.7);
+  }
+
+.list--modes {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 !important;
+  background: rgba(255,255,255,.5);
+  font: 16px/1.57 Arial, sans-serif;
+  color: #000;
+  }
+  .mode {
+    position: relative;
+    padding: .305em 1em;
+    box-shadow: 0 -1px 0 rgba(255,255,255,.5);
+    text-indent: 0 !important;
+    cursor: pointer;
+    transition: background-color .2s;
+
+    &:before {
+      content: "" !important;
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 0 !important;
+      border-width: 0;
+      border-color: transparent;
+      transition: all .1s;
+      }
+
+    &:hover,
+    &--current {
+      background: rgba(255,255,255,.5);
+      }
+    &:hover + &--current {
+      box-shadow: 0 -1px 0 rgba(255,255,255,.5);
+      }
+    &--current:before {
+      top: 0;
+      bottom: 0;
+      left: -.55em;
+      height: 0;
+      width: 0;
+      margin: auto;
+      border: .6em solid transparent;
+      border-left: 0;
+      border-color: transparent rgba(255,255,255,.75) transparent;
+      }
+    }
+
+

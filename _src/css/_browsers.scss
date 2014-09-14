@@ -1,48 +1,23 @@
-.list--browsers-inside {
-  LI {
-    margin-bottom: 50px;
-    }
-  }
+.list--support LI {
+  margin-bottom: 3em;
+}
 
 .browsers {
   display: inline-block;
   text-indent: 0;
+
   DT {
     display: inline-block;
-    width: 265px;
+    width: 360px;
     margin-right: 40px;
   }
 }
-
-.list--problems {
-  LI {
-    margin-bottom: 30px;
-    }
-  }
-
-.list--support-stacks {
-  DT {
-    width: 325px;
-    vertical-align: top;
-    }
-}
-
-.list--cssmasks {
-  DL {
-    vertical-align: top;
-  }
-  DT {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
-
 
 $browser-size: 64px;
 
 .browser {
   display: inline-block;
+  position: relative;
   width: $browser-size !important;
   height: $browser-size !important;
   margin-right: 20px;
@@ -67,12 +42,39 @@ $browser-size: 64px;
     opacity: .2;
     }
 
+.browser-flag:before{
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: -13px;
+  bottom: 5px;
+  width: 0;
+  height: 0;
+  border: 10px solid crimson;
+  border-width: 8px 12px;
+  border-right-color: transparent;
+  }
+.browser-flag:after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top:  10px;
+    width: 70px;
+    height: 40px;
+    background: rgba(255,255,255,.8);
+    transform: rotate(-45deg);
+    transform-origin: right bottom;
+    }
 .chrome {
   background-position: 0 0;
   }
 .firefox {
   background-position: 0 -#{$browser-size};
   }
+.ie {
+  background-position: 0 -#{$browser-size*3};
+  }
+
 .ie-8 {
   background-position: 0 -#{$browser-size*2};
   &:after {
@@ -87,6 +89,10 @@ $browser-size: 64px;
     content: "9+";
     padding-left: 3.7em;
     }
+  }
+
+.opera {
+  background-position: 0 -#{$browser-size*5};
   }
 .opera-old {
   background-position: 0 -#{$browser-size*4};
@@ -120,6 +126,12 @@ $browser-size: 64px;
   }
 .safari {
   background-position: 0 -#{$browser-size*6};
+  }
+.safari-8 {
+  background-position: 0 -#{$browser-size*6};
+  &:after {
+    content: "8+";
+    }
   }
 
 /*.ie8:before {

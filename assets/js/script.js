@@ -1,3 +1,5 @@
+// console.log("asdasd");
+
 var curSlideClass = ".slide.active";
 
 // Show Shapes

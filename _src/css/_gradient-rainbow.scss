@@ -1,0 +1,26 @@
+$colors-rainb:
+  white,
+  lightblue,
+  skyblue,
+  steelblue,
+  darken(steelblue, 10%),
+  red,
+  lighten(red, 20%),
+  orange,
+  gold,
+  lighten(gold, 30%);
+
+$set-rainb: (
+  colors: $colors-rainb,
+  bg-color: orangered
+);
+
+.demo--rainbow {
+  position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+  @include gradient-set($set-rainb,60deg);
+    background-blend-mode: multiply, normal;
+  }

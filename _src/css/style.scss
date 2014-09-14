@@ -5,6 +5,8 @@
     @include posabs;
     margin: auto;
     }
+
+
 /* SVG
 ------------------------- */
 
@@ -15,11 +17,6 @@ svg {
     .svg--ovh {
         overflow: hidden;
         }
-
-use {
-    transition: .5s;
-    /* breaks fill - why? */
-    }
 
 .hidden-svg-defs {
     position: absolute;
@@ -52,7 +49,15 @@ use {
         .full &:after {
             left: auto;
             }
+     .list--morespaces LI {
+        margin-bottom: 2em;
+        }
     }
+    .slide--tlen {
+        &>DIV {
+            padding: 30px 80px;
+            }
+        }
 
 .slide--imgcenter {
     & > DIV {
@@ -69,15 +74,36 @@ use {
         vertical-align: middle;
     }
 }
+
+.slide--imgfull {
+    & > DIV {
+    padding: 0;
+    text-align: center;
+    }
+    .abs-link {
+        position: absolute;
+        bottom: 2em;
+        right: 3em;
+        left: 3em;
+        background: #FFF;
+        box-shadow: 0 0 7px rgba(0,0,0,.5);
+        text-decoration: underline;
+        color: #000;
+        &:hover {
+            text-decoration: none;
+        }
+        }
+}
 .slide--vlm {
    & > DIV:before {
         content: "";
         display: inline-block;
         height: 440px;
         vertical-align: middle;
-        background: gold;
+        /*background: gold;*/
         }
-    svg, span {
+    svg, span,
+    .slide__content {
         display: inline-block;
         vertical-align: middle;
         }
@@ -96,22 +122,8 @@ use {
         }
     }
 
-.slide--heart {
-    .table-cell {
-        font: 5.5em/1 'Ubuntu Condensed', sans-serif;
-    }
-    svg {
-        margin: 0 .1em;
-        vertical-align: middle;
-        }
-  }
-
 .slide--horcenter {
     text-align: center;
-    }
-
-.slide--gradients-bugs IMG:first-of-type {
-    margin-right: 55px;
     }
 
 .slide--about H3 SPAN {
@@ -153,12 +165,31 @@ $svg-code-color: hsl(190, 70%, 75%);
 
 #Cover {
     text-align: center;
+    background-image:
+        url(../../assets/img/demos/kitten-635.jpeg),
+        radial-gradient(
+          orangered,
+          gold,
+          yellowgreen,
+          skyblue,
+          blue,
+          violet,
+          crimson);
+      background-color: white;
+      background-blend-mode:hard-light, normal;
+      background-size: cover;
     }
   #Cover h2 {
-    margin: 40px 0 0;
-    color: #FFF;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    margin: 0;
+    background: rgba(0,0,0,.5);
     text-align: center;
     font-size: 70px;
+    line-height: 1.9;
+    color: #FFF;
+    transform: none !important;
     }
   #Cover SPAN {
     display: block;
@@ -251,6 +282,23 @@ $svg-code-color: hsl(190, 70%, 75%);
         }
     }
 
+.modes-wrapper {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    UL {
+        margin: 0 !important;
+        }
+    LI {
+        text-indent: 0;
+        }
+    .column {
+        width: 30%;
+        }
+    }
+
+
+
 .photo {
     float: left;
     width: 300px;
@@ -259,4 +307,17 @@ $svg-code-color: hsl(190, 70%, 75%);
     }
 
 @import '_browsers';
+@import '_selectmode';
+
+@import '_js-blendmode';
+
+@import '_gradients';
+@import '_gradient-bluecarbon';
+@import '_gradient-rainbow';
+@import '_colorize';
+
+@import '_css-appear';
+
+@import '_colorimage';
+
 /*@import '_print';*/

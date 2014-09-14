@@ -1,0 +1,29 @@
+$color-bcb: steelblue;
+
+$colors-bcb:
+  saturate(darken($color-bcb, 15%), 30%),
+  $color-bcb,
+  lighten($color-bcb, 20%),
+  lighten($color-bcb, 40%),
+  white,
+  lighten($color-bcb, 40%),
+  lighten($color-bcb, 20%),
+  $color-bcb,
+  saturate(darken($color-bcb, 15%), 30%),
+  saturate(darken($color-bcb, 25%), 70%)
+  ;
+
+$set-bcb: (
+  colors: $colors-bcb,
+  bg-color: white
+);
+
+.demo--bluecarbon {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+  @include gradient-set($set-bcb,75deg, 3, 3.7);
+  background-blend-mode: multiply;
+  }

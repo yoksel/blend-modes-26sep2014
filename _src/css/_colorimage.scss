@@ -1,0 +1,17 @@
+$colorimage-grad: linear-gradient(purple, white);
+
+.demo--colorimage {
+    width: 400px;
+    height: 470px; /* 505 */
+    background:
+        url(../../assets/img/demos/kitten-505.jpeg),
+        $colorimage-grad;
+    background-blend-mode: hard-light;
+    }
+
+.demo--colorimage-revert {
+    background:
+        $colorimage-grad,
+        url(../../assets/img/demos/kitten-505.jpeg);
+
+    }

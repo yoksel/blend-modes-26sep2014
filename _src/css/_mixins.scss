@@ -1,6 +1,8 @@
 $base-size: 24px;
 $trans-dur: .3s;
 
+$transp: rgba(255,255,255,0);
+
 @mixin clear {
     content: "";
     display: table;

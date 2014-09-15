@@ -1,0 +1,52 @@
+$dark: teal;
+
+$colors-circles:
+    gold,
+    orange,
+    orangered,
+    $dark,
+    darken($dark, 10%),
+    darken($dark, 20%),
+    darken($dark, 30%),
+    $transp;
+
+$warm-circles: (
+    colors: $colors-circles,
+    bg-color: teal
+);
+
+@function rad-gradient($colors, $direct: circle) {
+
+    $out: yellow;
+
+    @for $item from 1 through length($colors) {
+        $color: nth($colors, $item);
+        $end: percentage($item/length($colors));
+        $begin: $end - 10;
+        $out: append($out, $color $begin, comma);
+        $out: append($out, transparentize($color,.9) $end, comma);
+    }
+
+    @return radial-gradient($direct, $out);
+}
+
+@mixin gradient-set ($colors-set: $warm){
+    $grad-colors: map-get($colors-set, colors);
+    $bg-color: map-get($colors-set, bg-color);
+    $size: 5;
+
+    background-image:
+        rad-gradient($grad-colors),
+        rad-gradient($grad-colors);
+    background-color: $bg-color;
+    background-size:
+        #{$size}em #{$size}em;
+    background-position: 0 0, #{$size/2}em #{$size/2}em;
+    }
+
+$mode-circles: color-dodge;
+
+.demo--circles {
+    @include gradient-set($warm-circles);
+    background-blend-mode: $mode-circles, $mode-circles, normal;
+    }

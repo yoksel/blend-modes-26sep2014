@@ -1,0 +1,58 @@
+$elem-default: '.l-wrapper';
+
+$colors-warm: purple, darkblue, crimson, orangered, gold, yellowgreen, steelblue;
+
+$warm: (
+  colors: $colors-warm,
+  bg-color: orangered
+);
+
+$colors-cold: darkblue, violet, steelblue, skyblue, teal, yellowgreen, darkslateblue;
+
+$cold: (
+  colors: $colors-cold,
+  bg-color: teal
+);
+
+$sizes: 1, 3, 5, 7, 11, 13, 17, 23;
+
+@function gradient($colors) {
+  $transp-02: rgba(255,255,255,.2);
+  $out: null;
+
+  @for $item from 1 through length($colors) {
+    $color: transparentize(nth($colors, $item),  1/$item);
+    $out-string: linear-gradient(90deg,
+                $color 50%,
+                $transp-02 50%);
+    $out: append($out, $out-string, comma);
+  }
+
+  @return $out;
+}
+
+@function sizes() {
+  $out: null;
+
+  @each $item in $sizes {
+    $out-string: #{$item}em #{$item}em;
+    $out: append($out-string, $out, comma);
+  }
+
+  @return $out;
+}
+
+
+@mixin gradient-set ($colors-set: $cold){
+  $grad-colors: map-get($colors-set, colors);
+  $bg-color: map-get($colors-set, bg-color);
+
+  background-image: gradient($grad-colors);
+  background-color: $bg-color;
+  background-size: sizes();
+  }
+
+.demo--cicada {
+  @include gradient-set($warm);
+  background-blend-mode: normal, screen, overlay, multiply, soft-light;
+  }

@@ -177,24 +177,25 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            main: {
+            build: {
                 files: [
-
-                    // includes files within path and its sub-directories
+                // makes all src relative to cwd
+                // {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
                     {
                         expand: true,
-                        src: ['assets/**'],
-                        dest: 'build/'
-                    }, {
-                        expand: true,
                         src: ['node_modules/shower-core/**'],
-                        dest: 'build/'
+                        dest: 'assets/',
+                        rename: function(dest, src) {
+                          return dest + src.replace(/node_modules/, "");
+                        }
                     }, {
                         expand: true,
                         src: ['node_modules/shower-bright/**'],
-                        dest: 'build/'
-                    },
-                    // {expand: true, src: ['index.html'], dest: 'build/'}
+                        dest: 'assets/',
+                        rename: function(dest, src) {
+                          return dest + src.replace(/node_modules/, "");
+                        }
+                    }
                 ]
             }
         },
@@ -237,7 +238,7 @@ module.exports = function(grunt) {
         'sass:dist',
         'autoprefixer',
         'copy',
-        'includereplace:build'
+        // 'includereplace:build'
     ]);
 
 };

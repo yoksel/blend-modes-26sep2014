@@ -156,7 +156,7 @@ module.exports = function(grunt) {
          * Include files for build version
          */
         includereplace: {
-            dev: {
+            mail: {
                 options: {
                     // Task-specific options go here.
                 },
@@ -164,15 +164,6 @@ module.exports = function(grunt) {
                 src: 'index-src.html',
                 // Destination directory to copy files to
                 dest: 'index.html'
-            },
-            build: {
-                options: {
-                    // Task-specific options go here.
-                },
-                // Files to perform replacements and includes with
-                src: 'index.html',
-                // Destination directory to copy files to
-                dest: 'build/index.html'
             }
         },
 
@@ -225,10 +216,6 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
-    grunt.registerTask('replace', [
-        'includereplace:dev'
-    ]);
-
     grunt.registerTask('svg', [
         'svgstore'
         // 'svgmin'
@@ -238,7 +225,7 @@ module.exports = function(grunt) {
         'sass:dist',
         'autoprefixer',
         'copy',
-        // 'includereplace:build'
+        'includereplace'
     ]);
 
 };

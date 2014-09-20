@@ -11,9 +11,9 @@ $radius: .9em;
   bottom: 0;
   left: 0;
   padding: 2em 0 0;
-  background: linear-gradient(90deg,rgba(255,255,255,.15) 50%,rgba(255,255,255,0) 50%) 50% 50%,
-    $base-color;
-  background-size: 5em 5em;
+  background: $base-color url(../../assets/img/demos/gray-foliage.png);
+  background-blend-mode: luminosity;
+  /*background-size: 5em 5em;*/
   }
 
 

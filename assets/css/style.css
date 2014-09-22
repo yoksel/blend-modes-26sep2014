@@ -183,7 +183,7 @@ svg {
 .slide--vlm > DIV:before {
   content: "";
   display: inline-block;
-  height: 440px;
+  height: 100%;
   vertical-align: middle;
   /*background: gold;*/
 }
@@ -264,32 +264,6 @@ PRE:before {
   -webkit-transform: none !important;
   -ms-transform: none !important;
   transform: none !important;
-}
-
-#Cover SPAN {
-  display: block;
-  margin: 10px 0 0;
-  text-align: center;
-  color: #FFF;
-  font-size: 200px;
-  line-height: 2;
-}
-
-#Cover p a {
-  color: #FFF;
-}
-
-.slide.cover svg {
-  position: relative;
-}
-
-#cover-text {
-  margin-top: 70px;
-  width: 100%;
-  height: 290px;
-  font-family: 'Arial Black';
-  font-size: 15.5em;
-  letter-spacing: -0.05em;
 }
 
 /* Popup
@@ -424,7 +398,7 @@ PRE:before {
 }
 
 .no-support {
-  opacity: .2;
+  opacity: .5;
 }
 
 .browser-flag:before {
@@ -444,10 +418,10 @@ PRE:before {
   content: "";
   position: absolute;
   right: -20px;
-  top: 10px;
+  top: 5px;
   width: 70px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.7);
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -594,7 +568,7 @@ PRE:before {
 
 .mode {
   position: relative;
-  padding: .305em 1em;
+  padding: .314em 1em;
   -webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.5);
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.5);
   text-indent: 0 !important;
@@ -737,10 +711,9 @@ PRE:before {
   bottom: 0;
   left: 0;
   padding: 2em 0 0;
-  background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%) 50% 50%, #4dc9cb;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 50%) 50% 50%, #4dc9cb;
-  -webkit-background-size: 5em 5em;
-  background-size: 5em 5em;
+  background: #4dc9cb url(../../assets/img/demos/gray-foliage.png);
+  background-blend-mode: luminosity;
+  /*background-size: 5em 5em;*/
 }
 
 .colorize-demo__content {
@@ -867,6 +840,15 @@ PRE:before {
   width: 50%;
   margin: auto;
   bottom: -3em;
+}
+
+.demo--vignette {
+  width: 700px;
+  height: 500px;
+  margin: 0 auto;
+  background-image: url(../../assets/img/demos/kitten-508.jpeg), -webkit-radial-gradient(white 50%, black);
+  background-image: url(../../assets/img/demos/kitten-508.jpeg), radial-gradient(white 50%, black);
+  background-blend-mode: multiply;
 }
 
 .list--steps {

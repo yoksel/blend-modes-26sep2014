@@ -1,0 +1,9 @@
+.demo--vignette {
+  width: 700px;
+  height: 500px;
+  margin: 0 auto;
+  background-image:
+    url(../../assets/img/demos/kitten-508.jpeg),
+    radial-gradient(white 50%,hsl(0,0,0));
+  background-blend-mode: multiply;
+}

@@ -39,7 +39,7 @@ $browser-size: 64px;
     margin-right: 11px;
     }
   .no-support {
-    opacity: .2;
+    opacity: .5;
     }
 
 .browser-flag:before{
@@ -58,10 +58,10 @@ $browser-size: 64px;
     content: "";
     position: absolute;
     right: -20px;
-    top:  10px;
+    top:  5px;
     width: 70px;
     height: 40px;
-    background: rgba(255,255,255,.8);
+    background: rgba(255,255,255,.7);
     transform: rotate(-45deg);
     transform-origin: right bottom;
     }

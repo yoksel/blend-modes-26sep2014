@@ -121,6 +121,13 @@ svg {
   left: 0;
 }
 
+.qr-code {
+  display: block;
+  width: 480px;
+  height: 480px;
+  margin: 0 auto;
+}
+
 /* Slides
 ------------------------- */
 .slide > DIV {
@@ -792,13 +799,13 @@ PRE:before {
   transition: all .4s;
 }
 .colorize-demo__content .nav__item--home {
-  background-image: url(http://img-fotki.yandex.ru/get/5314/5091629.67/0_5ba15_745b5d41_orig.png);
+  background-image: url(../../assets/img/demos/round-tulips.png);
 }
 .colorize-demo__content .nav__item--blog {
-  background-image: url(http://img-fotki.yandex.ru/get/5413/5091629.67/0_5ba12_81d03a82_orig.png);
+  background-image: url(../../assets/img/demos/round-green.png);
 }
 .colorize-demo__content .nav__item--gallery {
-  background-image: url(http://img-fotki.yandex.ru/get/5413/5091629.67/0_5ba11_d4e50331_orig.png);
+  background-image: url(../../assets/img/demos/round-blue.png);
   background-position: -1px -1px;
 }
 .colorize-demo__content H1,
@@ -890,8 +897,8 @@ PRE:before {
   bottom: -350px;
   margin: auto;
   background-color: #FFF;
-  background-image: url(http://img-fotki.yandex.ru/get/5113/5091629.a1/0_8541e_74315074_XL), -webkit-radial-gradient(circle, white 30%, transparent 75%), -webkit-radial-gradient(circle, white 30%, transparent 75%), url(http://img-fotki.yandex.ru/get/4809/5091629.a1/0_8541d_e0623a7b_orig);
-  background-image: url(http://img-fotki.yandex.ru/get/5113/5091629.a1/0_8541e_74315074_XL), radial-gradient(circle, white 30%, transparent 75%), radial-gradient(circle, white 30%, transparent 75%), url(http://img-fotki.yandex.ru/get/4809/5091629.a1/0_8541d_e0623a7b_orig);
+  background-image: url(../../assets/img/demos/tlen-trees.jpeg), -webkit-radial-gradient(circle, white 30%, transparent 75%), -webkit-radial-gradient(circle, white 30%, transparent 75%), url(../../assets/img/demos/tlen-kitten.jpeg);
+  background-image: url(../../assets/img/demos/tlen-trees.jpeg), radial-gradient(circle, white 30%, transparent 75%), radial-gradient(circle, white 30%, transparent 75%), url(../../assets/img/demos/tlen-kitten.jpeg);
   background-position: 50% 50%, 475px 140px, 525px 140px, 50% 100%;
   background-blend-mode: overlay, color-dodge, color-dodge, luminosity;
   -webkit-background-size: cover, 50px 50px, 50px 50px, auto;

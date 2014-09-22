@@ -21,16 +21,16 @@
         <p>Бухвалова Юлия, Livejournal</p>
     </header>
 
-    <section class="slide slide--imgcenter" id="Cover"><div>
+    <section class="slide slide--imgcenter js--togglemode" id="Cover"><div>
         <h2 class="free-fly">Режимы смешивания в CSS</h2>
     </div></section>
 
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
-
-        <div class="slide__content"><h2>background-blend-mode</h2>
-        <h2>mix-blend-mode</h2></div>
-
+        <div class="slide__content">
+            <h2>background-blend-mode</h2>
+            <h2 class="next">mix-blend-mode</h2>
+        </div>
     </div></section>
 
     <!-- Slide -->
@@ -154,7 +154,7 @@
 <code class="next">    radial-gradient(circle, white 30%, transparent 75%),</code>
 <code class="next">    radial-gradient(circle, white 30%, transparent 75%),</code>
 <code class="next">    url(kitten.jpeg);</code>
-            <code class="next">background-blend-mode: overlay, color-dodge, color-dodge,luminosity;<div class="demo--tlen demo--tlen-blend"></div></code>
+            <code class="next">background-blend-mode: overlay, color-dodge, color-dodge, luminosity;<div class="demo--tlen demo--tlen-blend"></div></code>
         </pre>
 
     </div></section>
@@ -188,8 +188,13 @@
 
     <!-- Slide -->
     <section class="slide"><div>
-        <pre><code>IMG { mix-blend-mode: multiply; }</code>
-        <code>H1 { mix-blend-mode: overlay; }</code></pre>
+        <pre><code>IMG {</code>
+        <code>    mix-blend-mode: multiply; </code>
+        <code>    }</code></pre>
+
+        <pre class="next"><code>.entry { </code>
+        <code>    mix-blend-mode: overlay; </code>
+        <code>    }</code></pre>
 
     </div></section>
 
@@ -211,19 +216,19 @@
         <li>
             <dl class="browsers">
                 <dt>background-blend-mode</dt>
-                <dd class="browser chrome"></dd>
                 <dd class="browser firefox"></dd>
+                <dd class="browser chrome"></dd>
                 <dd class="browser opera"></dd>
                 <dd class="browser safari-8 no-support"></dd>
                 <dd class="browser ie no-support"></dd>
             </dl>
         </li>
 
-        <li>
+        <li class="next">
             <dl class="browsers">
                 <dt>mix-blend-mode</dt>
-                <dd class="browser chrome browser-flag"></dd>
                 <dd class="browser firefox"></dd>
+                <dd class="browser chrome browser-flag"></dd>
                 <dd class="browser opera  browser-flag"></dd>
                 <dd class="browser safari-8 no-support"></dd>
                 <dd class="browser ie no-support"></dd>
@@ -239,11 +244,11 @@
 
         <ul class="list--morespaces">
             <li><b>Включить в Crome:</b><br/> chrome://flags/#enable-experimental-web-platform-features</li>
-            <li><b>Включить в Opera:</b><br/>
+            <li class="next"><b>Включить в Opera:</b><br/>
        opera://flags/#enable-experimental-web-platform-features
             </li>
 
-            <li><b>Узнать актуальную поддержку браузерами:</b><br/> <a href="http://caniuse.com/#search=blend">caniuse.com/#search=blend</a></li>
+            <li class="next"><b>Узнать актуальную поддержку браузерами:</b><br/> <a href="http://caniuse.com/#search=blend">caniuse.com/#search=blend</a></li>
         </ul>
 
     </div></section>
@@ -255,12 +260,12 @@
     <section class="slide"><div>
         <h3>Полезные ссылки</h3>
             <ul>
-                <li><a href="http://www.w3.org/TR/compositing-1/">Спецификация</a></li>
-                <li><a href="https://dev.opera.com/articles/getting-to-know-css-blend-modes/">Getting to Know CSS Blend Modes</a></li>
+                <li><a href="http://www.w3.org/TR/compositing-1/">Спецификация</a> En</li>
+                <li><a href="https://dev.opera.com/articles/getting-to-know-css-blend-modes/">Getting to Know CSS Blend Modes</a> En</li>
                 <li><a href="http://codepen.io/collection/Hcdol/">Сборник экспериментов от Adobe</a></li>
                 <li><a href="http://codepen.io/collection/fEkjb/">Мои эксперименты</a></li>
                 <li><a href="http://css.yoksel.ru/background-blend-mode/">Background-blend-mode</a> (статья на русском)</li>
-                <li><a href="http://webstandardsdays.ru/2014/06/28/pres/web-instagram/">Как сделать Instagram в браузере</a>(презентация)</li>
+                <li><a href="http://webstandardsdays.ru/2014/06/28/pres/web-instagram/">Как сделать Instagram в браузере</a> (презентация)</li>
             </ul>
     </div></section>
 

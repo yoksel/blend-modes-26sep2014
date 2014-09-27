@@ -1,0 +1,18 @@
+.js-buttons-wrapper {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: .5em;
+    background: rgba(0,0,0,.4);
+    }
+    .full .js-buttons-wrapper {
+        display: none;
+        }
+    .js-buttons-wrapper BUTTON {
+        width: 45%;
+        margin: 0 .2em;
+        border: 0;
+        border-radius: .3em;
+        font-size: 2em;
+        }

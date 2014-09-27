@@ -1,7 +1,5 @@
 var selectmode = function(){
 
-  console.log("hello");
-
   var doc = document;
   var modePrefix = "mode";
   var modeCurrent = modePrefix + "--current";

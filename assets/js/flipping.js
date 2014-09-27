@@ -31,6 +31,6 @@ var flipping = function () {
 };
 var isiPad = navigator.userAgent.match(/iPad/i) != null;
 
-if(isiPad){
+// if(isiPad){
     flipping();
-}
+// }

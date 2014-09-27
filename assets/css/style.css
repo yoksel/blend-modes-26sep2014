@@ -226,10 +226,13 @@ svg {
 
 /* Footer
 ------------------------- */
-.slide:target footer {
-  bottom: 0;
+.slide footer {
   padding: 20px 50px;
   line-height: 1.4;
+}
+
+.slide:target footer {
+  bottom: 0;
 }
 
 /* Pre

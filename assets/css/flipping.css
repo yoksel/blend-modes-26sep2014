@@ -22,7 +22,7 @@
 
 @media screen and (max-width: 1180px) {
     .ipad.list .slide {
-       top:430px;
+       top: 430px;
         margin: -430px -670px 0 0;
         -webkit-transform: scale(.3);
         -ms-transform: scale(.3);

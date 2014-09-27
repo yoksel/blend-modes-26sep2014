@@ -139,6 +139,17 @@ svg {
     color: #777;
     }
 
+/* Footer
+------------------------- */
+.slide:target footer {
+    bottom: 0;
+    padding: 20px 50px;
+    line-height: 1.4;
+    }
+
+/* Pre
+------------------------- */
+
 PRE {
     position: relative;
     &:before {

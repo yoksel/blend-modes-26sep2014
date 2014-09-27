@@ -1,9 +1,9 @@
-console.log("123");
-
 var flipping = function () {
     var doc = document;
     var head = doc.querySelector("head");
     var body = doc.querySelector("body");
+
+    body.classList.add("ipad");
 
     var myCss = doc.createElement("style");
     head.appendChild(myCss);
@@ -31,6 +31,6 @@ var flipping = function () {
 };
 var isiPad = navigator.userAgent.match(/iPad/i) != null;
 
-// if(isiPad){
+if(isiPad){
     flipping();
-// }
+}

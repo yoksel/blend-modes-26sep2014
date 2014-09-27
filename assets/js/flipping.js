@@ -5,9 +5,6 @@ var flipping = function () {
 
     body.classList.add("ipad");
 
-    var myCss = doc.createElement("style");
-    head.appendChild(myCss);
-
     var button = doc.createElement("button");
 
     var leftButton = button.cloneNode(false);
